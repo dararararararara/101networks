@@ -1,0 +1,47 @@
+/* Footer.css */
+.footer {
+    background-color: #fff; /* Fondo blanco */
+    color: #333; /* Texto oscuro para buena legibilidad */
+    padding: 30px 20px;
+    font-family: 'Arial', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Diseño con columnas flexibles */
+    gap: 20px; /* Espacio entre las columnas */
+    border-top: 1px solid #ddd; /* Línea sutil para separar el footer */
+    text-align: left;
+}
+
+.footer-links, .footer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links p, .footer-info p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.footer-links a, .footer-info a {
+    color: #007bff; /* Color de enlace azul */
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.footer-links a:hover, .footer-info a:hover {
+    text-decoration: underline;
+}
+
+.footer-info strong {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        grid-template-columns: 1fr; /* En pantallas pequeñas, todo en una sola columna */
+        text-align: center;
+    }
+
+    .footer-links, .footer-info {
+        margin-bottom: 20px;
+    }
+}

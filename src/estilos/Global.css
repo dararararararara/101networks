@@ -1,0 +1,51 @@
+/* src/estilos/Global.css */
+
+/* Resetear márgenes y padding para evitar inconsistencias */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;  /* Puedes usar la fuente que prefieras */
+    background-color: #f9f9f9;  /* Fondo claro */
+    color: #333;  /* Color de texto oscuro */
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4 {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  /* Agregar un fondo perla para todo el contenido (puedes modificar esto) */
+  .App {
+    background-color: #f2f2f2; /* Blanco perla */
+  }
+
+  /* Estilos generales para los links */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Estilos para centrar los elementos de la página */
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }

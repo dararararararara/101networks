@@ -1,0 +1,73 @@
+.process {
+    background-color: #f4f4f4; /* Fondo gris claro */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Ancho máximo para el contenedor */
+    margin: auto; /* Centra el contenedor */
+    font-family: 'Arial', sans-serif; /* Fuente sans-serif */
+}
+
+.process h2 {
+    text-align: center; /* Centrar el título */
+    color: #2c3e50; /* Color oscuro para el título */
+    margin-bottom: 20px; /* Espaciado inferior */
+    font-size: 1.8em; /* Tamaño de fuente mayor */
+}
+
+.process p {
+    text-align: center; /* Centrar el párrafo */
+    margin-bottom: 30px; /* Espaciado inferior */
+    color: #34495e; /* Color del texto */
+}
+
+/* Estilo para la lista ordenada */
+.process ol {
+    counter-reset: step; /* Iniciar el contador para pasos */
+    padding-left: 0; /* Eliminar margen lateral */
+}
+
+.process li {
+    background: #fff; /* Fondo blanco para cada paso */
+    margin: 15px 0; /* Margen superior e inferior */
+    padding: 15px; /* Espaciado interno */
+    border: 2px solid #3498db; /* Borde azul */
+    border-radius: 5px; /* Bordes redondeados */
+    position: relative; /* Posición relativa para la animación */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animaciones en la transición */
+}
+
+/* Número de pasos */
+.process li::before {
+    counter-increment: step; /* Incrementar el contador */
+    content: counter(step);
+    position: absolute; /* Posición absoluta para el número */
+    left: -30px; /* Alinear el número a la izquierda */
+    top: 50%;
+    transform: translateY(-50%); /* Centrar verticalmente */
+    background: #3498db; /* Fondo azul para el número */
+    color: white; /* Color del número */
+    border-radius: 50%; /* Hacer el fondo del número redondo */
+    width: 30px; /* Anchura del círculo */
+    height: 30px; /* Altura del círculo */
+    display: flex; /* Flex para centrar el número */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+/* Efecto al pasar el cursor */
+.process li:hover {
+    transform: translateY(-5px); /* Elevar levemente el paso */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra al pasar el cursor */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .process {
+        padding: 20px; /* Menor padding en pantallas pequeñas */
+    }
+
+    .process h2 {
+        font-size: 1.5em; /* Reducir tamaño del título en pantallas pequeñas */
+    }
+}

@@ -1,0 +1,81 @@
+.contact {
+  display: flex; /* Disposición en flex para la división */
+  height: 100vh; /* Altura completa de la ventana */
+  overflow: hidden; /* Evitar el desplazamiento */
+}
+
+/* Estilo para el contenedor del formulario */
+.contact-form-container {
+  flex: 1; /* Ocupa la mitad del ancho */
+  background-color: #1e1e2f; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+  padding: 30px; /* Padding interno más compacto */
+  display: flex;
+  flex-direction: column; /* Disposición vertical */
+  justify-content: center; /* Centrar verticalmente */
+  border-right: 6px solid #ffc107; /* Línea de separación amarilla */
+  border-radius: 15px; /* Bordes redondeados */
+  margin: 20px; /* Margen para separación */
+}
+
+/* Estilo del título */
+.contact-form-container h2 {
+  margin-bottom: 20px; /* Espacio inferior */
+  font-weight: bold; /* Hacer el título negrita */
+  font-size: 2em; /* Aumentar tamaño de título */
+  text-align: center; /* Centrar el texto */
+}
+
+/* Estilo de las etiquetas y campos de entrada */
+.contact-form-container label {
+  margin-bottom: 5px; /* Espacio entre etiquetas y campos */
+  font-weight: bold; /* Hacer la etiqueta negrita */
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+  padding: 15px; /* Espaciado dentro de los campos */
+  margin-bottom: 15px; /* Espacio entre campos */
+  border: 2px solid #ffc107; /* Borde amarillo */
+  border-radius: 10px; /* Bordes redondeados más pronunciados */
+  width: 100%; /* Ancho completo */
+  box-sizing: border-box; /* Incluir padding en el ancho */
+  background-color: #2c2c3c; /* Fondo de los campos oscuro */
+  color: #ffffff; /* Color del texto */
+}
+
+/* Estilo del botón */
+.submit-btn {
+  background-color: #007bff; /* Color de fondo azul vibrante */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 10px; /* Espacios internos */
+  border-radius: 10px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar a pointer */
+  font-size: 16px; /* Tamaño de fuente */
+  transition: background-color 0.3s; /* Transición para el hover */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.submit-btn:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+}
+
+/* Estilo del contenedor de la imagen */
+.contact-image-container {
+  flex: 1; /* Ocupa la mitad del ancho */
+  display: flex; /* Alinear imagen al centro */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  margin: 0; /* Sin margen */
+}
+
+/* Estilo de la imagen */
+.contact-image-container img {
+  max-width: 100%; /* Ancho máximo */
+  height: auto; /* Altura automática para mantener la proporción */
+  width: 100%; /* Ancho completo para la imagen */
+  max-height: 100%; /* Para evitar que se desborde */
+  margin-left: -20px; /* Acercar la imagen al formulario */
+  border-radius: 15px; /* Bordes redondeados para la imagen */
+}

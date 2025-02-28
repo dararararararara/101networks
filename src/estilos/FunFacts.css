@@ -1,0 +1,41 @@
+.fanfacts {
+  background-color: #f8f8f8; /* Fondo claro */
+  padding: 40px 20px; /* Padding en la sección */
+  text-align: center; /* Alinear el texto al centro */
+}
+
+/* Estilo del título */
+.fanfacts h2 {
+  color: #2c3e50; /* Color de título */
+  margin-bottom: 30px; /* Espacio bajo el título */
+}
+
+/* Estilo del contenedor del carrusel */
+.fanfacts-carousel {
+  display: flex; /* Flexbox para alineación horizontal */
+  overflow: hidden; /* Ocultar el contenido fuera del contenedor */
+  scroll-behavior: smooth; /* Desplazamiento suave */
+  position: relative; /* Necesario para posicionar los elementos del carrusel */
+}
+
+/* Estilo para cada cuadro */
+.fanfacts-item {
+  min-width: 300px; /* Anchura mínima de cada cuadro */
+  margin: 0 10px; /* Margen en los lados */
+  padding: 20px; /* Padding interno */
+  background-color: #ffffff; /* Fondo blanco para cada cuadro */
+  border: 2px solid #3498db; /* Borde azul */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: transform 0.3s; /* Suave transformación */
+}
+
+/* Efecto al pasar el cursor */
+.fanfacts-item:hover {
+  transform: scale(1.05); /* Aumentar ligeramente el cuadro al pasar el mouse */
+}
+
+/* Estilo para los items dentro del carrusel */
+.fanfacts-carousel::-webkit-scrollbar {
+  display: none; /* Ocultar scrollbar */
+}

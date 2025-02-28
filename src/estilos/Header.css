@@ -1,0 +1,76 @@
+/* src/estilos/Header.css */
+
+.header {
+    background: #f8f8f8; /* Blanco perla */
+    padding: 5px 0; /* Compacto pero con presencia */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Contenedor principal */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos para el logo */
+.logo img {
+    height: 75px; /* Un poco más grande */
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover img {
+    transform: scale(1.05);
+}
+
+/* Menú de navegación */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    flex-grow: 1;
+    justify-content: space-around; /* Expande los links sin apretarlos */
+    padding: 0;
+    margin: 0 50px;
+}
+
+/* Estilos para los links */
+.nav-link {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Hover: Cambio de color + efecto sutil */
+.nav-link:hover {
+    color: #007bff;
+    transform: scale(1.05);
+}
+
+/* Responsive: Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin: 10px 0 0;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+}

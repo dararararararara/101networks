@@ -1,0 +1,95 @@
+/* src/estilos/Hero.css */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 900px; /* Ajusta la altura según lo que necesites */
+    background: url('../assets/J52.gif') center/contain no-repeat; /* Cambié cover por contain */
+    background-size: 150%; /* Aumenté el tamaño del GIF al 150% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Fondo oscuro para que el texto sea más legible */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece un poco el GIF */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Texto */
+.hero h1 {
+    font-size: 5rem;
+    color: #fff; /* Letras blancas */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 2rem;
+    color: #ddd; /* Un poco menos intenso que el título */
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Animación de la línea LED */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red);
+    background-size: 300% 100%;
+    animation: ledMove 5s linear infinite;
+    z-index: 1;
+}
+
+@keyframes ledMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Efecto de brillo en el fondo */
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 30%);
+    background-size: 10px 10px;
+    animation: blink 0.3s linear infinite;
+    z-index: -1;
+}
+
+@keyframes blink {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
